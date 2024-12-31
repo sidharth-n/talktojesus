@@ -3,40 +3,39 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "I was going through a tough time in my marriage. Hearing AI Jesus address my concerns with empathy helped me calm down and think more clearly.",
-    author: "Maria, 34"
+    quote: "It felt like a truly divine connection. The conversation was deeply meaningful and brought me peace.",
+    author: "Sarah M."
   },
   {
-    quote: "In my darkest moment, this service provided the comfort I needed. It felt like a warm embrace of understanding.",
-    author: "James, 45"
+    quote: "In my darkest moments, having someone to talk to who understands and guides with biblical wisdom is invaluable.",
+    author: "Michael R."
   },
   {
-    quote: "The gentle guidance helped me find inner peace during a difficult career transition. I'm grateful for this experience.",
-    author: "Sarah, 29"
+    quote: "The experience was surprisingly personal and uplifting. It helped me find clarity in my faith journey.",
+    author: "Rachel K."
   }
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-serif text-center mb-16">
-          Real Stories from People Who Found Comfort
+    <section className="py-20 bg-gradient-to-br from-indigo-900/90 via-purple-900/90 to-pink-900/90">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-serif text-center mb-12 text-white">
+          Hear What Others Are Saying
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#F5F2FF] p-8 rounded-2xl relative">
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-[#FFC107] opacity-50" />
-              <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
-              <p className="text-gray-600 font-semibold">— {testimonial.author}</p>
+            <div
+              key={index}
+              className="p-6 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+            >
+              <Quote className="w-8 h-8 text-yellow-400 mb-4" />
+              <p className="text-gray-200 mb-4">{testimonial.quote}</p>
+              <p className="text-yellow-400 font-semibold">{testimonial.author}</p>
             </div>
           ))}
         </div>
-        
-        <p className="text-sm text-gray-500 text-center mt-8">
-          These testimonials reflect individual experiences. Results may vary. This service is not a replacement for professional medical or psychological help.
-        </p>
       </div>
     </section>
   );

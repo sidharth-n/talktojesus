@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Cinzel', 'serif'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.8s ease-out forwards',
       },
     },
   },

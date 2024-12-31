@@ -1,23 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: "Inter", sans-serif;
+@layer utilities {
+  .animate-gradient {
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
   }
-  
-  .font-serif {
-    font-family: "Playfair Display", serif;
+
+  .animate-text {
+    animation: text 8s ease infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
   }
 }
 
-@keyframes slide-up {
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes text {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -25,6 +51,7 @@
   }
 }
 
-.animate-slide-up {
-  animation: slide-up 0.3s ease-out;
+@font-face {
+  font-family: 'Cinzel';
+  src: url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
 }

@@ -1,24 +1,22 @@
 import React from 'react';
-import Hero from './components/Hero';
-import OnboardingSection from './components/Onboarding/OnboardingSection';
+import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
 import HowItWorks from './components/HowItWorks';
-import Features from './components/Features';
+import OnboardingSection from './components/onboarding/OnboardingSection';
 import Testimonials from './components/Testimonials';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Hero />
+    <div className="min-h-screen bg-gray-900 text-white">
+      <HeroSection />
+      <FeaturesSection />
       <HowItWorks />
-       <Testimonials />
       <OnboardingSection />
-      <Features />
-      <Pricing />
-      <FAQ />
+      <Testimonials />
       <Footer />
     </div>
   );
 }
+
+export default App;

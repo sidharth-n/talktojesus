@@ -1,44 +1,32 @@
 import React from 'react';
+import { Facebook, Twitter, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="font-serif text-xl mb-4">Talk to Jesus</h3>
-            <p className="text-gray-600 text-sm">
-              AI-powered comfort and guidance for your spiritual journey.
-            </p>
+    <footer className="py-12 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0">
+            <h3 className="text-xl font-serif text-white mb-2">TaktoJesus</h3>
+            <p className="text-gray-300">Experience the divine with TaktoJesus</p>
           </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-600">
-              <li><a href="#" className="hover:text-[#FFC107]">About</a></li>
-              <li><a href="#" className="hover:text-[#FFC107]">Contact</a></li>
-              <li><a href="#" className="hover:text-[#FFC107]">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-[#FFC107]">Privacy Policy</a></li>
-            </ul>
+
+          <div className="flex gap-8 mb-6 md:mb-0">
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">About</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Contact Us</a>
           </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Important</h4>
-            <ul className="space-y-2 text-gray-600">
-              <li><a href="#" className="hover:text-[#FFC107]">Disclaimer</a></li>
-              <li><a href="#" className="hover:text-[#FFC107]">Support</a></li>
-              <li><a href="#" className="hover:text-[#FFC107]">FAQ</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
-            <p className="text-sm text-gray-600">
-              © 2024 Talk to Jesus AI. All Rights Reserved.
-            </p>
-            <p className="text-sm text-gray-600 mt-2">
-              This is an AI simulation and is not affiliated with any religious institution.
-            </p>
+
+          <div className="flex gap-4">
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <Twitter className="w-6 h-6" />
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <Instagram className="w-6 h-6" />
+            </a>
           </div>
         </div>
       </div>
